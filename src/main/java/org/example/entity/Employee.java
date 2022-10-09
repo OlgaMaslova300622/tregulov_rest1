@@ -1,27 +1,14 @@
 package org.example.entity;
 
-import javax.persistence.*;
 
-@Entity
-@Table(name = "employees")
-public class Employee {
+public class Employee { // класс нужен для преобразования json  в java объект, поэтому нет аннотаций
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private int id;
-
-    @Column(name = "name")
     private String name;
-
-    @Column (name = "surname")
     private String surname;
-
-    @Column (name = "department")
     private String department;
-
-    @Column (name = "salary")
     private int salary;
+
 
     public Employee() {
 
